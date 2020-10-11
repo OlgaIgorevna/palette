@@ -1,0 +1,20 @@
+.menu{
+    display: flex;
+    margin-bottom: 24px;
+}
+.menu-elem{
+    margin-right: 38px;
+    list-style-type: none;
+}
+.menu-elem a{
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.menu-elem .active{
+    text-decoration: underline;
+}
+.menu-elem:hover{
+    text-decoration: underline;
+}

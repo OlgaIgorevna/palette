@@ -1,0 +1,51 @@
+.input-label{
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 5px;
+    color: rgba(235, 235, 245, 0.6);
+}
+.input{
+    width: 343px;
+    height: 36px;
+    padding: 7px 12px;
+    color: rgba(235, 235, 245, 0.6);
+    font-size: 17px;
+    line-height: 22px;
+    background-color: rgba(118, 118, 128, 0.24);
+    border-radius: 10px;
+    border: none;
+}
+.input-wrap{
+    margin-bottom: 18px;
+}
+.input.input-file{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    padding: 0;
+    /*height: 86px;
+    width: 122px;
+    background: rgba(118, 118, 128, 0.24);
+    border-radius: 10px;*/
+}
+.label-file{
+    display: block;
+    height: 86px;
+   width: 122px;
+   background-color: rgba(118, 118, 128, 0.24);
+    background-image: url("../../images/Vector.png");
+    background-size: 60px 56px;
+    background-position: center;
+    background-repeat: no-repeat;
+   border-radius: 10px;
+}
+.label-file:hover{
+    cursor: pointer;
+}
+
+.input-textarea{
+    height: 120px;
+    resize: none;
+}
