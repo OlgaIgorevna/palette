@@ -63,7 +63,7 @@ const Form= ()=>{
             options: {accept:'image/*'}
         },
 
-    ]
+    ];
 
 
 

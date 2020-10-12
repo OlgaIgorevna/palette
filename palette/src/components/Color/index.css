@@ -1,0 +1,12 @@
+.color-cell{
+    width: 54px;
+    height: 54px;
+    border-radius: 5px;
+}
+.color{
+    margin-right: 25px;
+}
+.colors-container{
+    display: flex;
+    margin-bottom: 50px;
+}
