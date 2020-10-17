@@ -22,6 +22,9 @@ const palette = (state = initialState, action) => {
             //let newColorIds = colorIds.indexOf(action.payload)
             return {  }
         }
+        case 'CHANGE_COLOR':{
+            return {}
+        }
         default: {
             return state;
         }

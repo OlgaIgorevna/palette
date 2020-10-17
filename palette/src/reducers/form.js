@@ -10,7 +10,6 @@ const initialState = {
 const form = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_FIELD': {
-            console.log("SET_FIELD reducer", action.payload);
             return {...state, [action.payload.name] : action.payload.value};
         }
         case 'SEND_FORM':{

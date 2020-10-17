@@ -14,11 +14,13 @@ export const sendForm = ()=>{
         let name = getState().form.name;
         let surname = getState().form.surname;
         let patronymic = getState().form.patronymic;
+        let photo = getState().form.photo.file;
 
         let body = new FormData();
         body.append("action", "send_data");
         body.append("id", 1);
         body.append("concat", [name, surname, patronymic]);
+        body.append("image", photo);
 
         let params={
             method: 'POST',

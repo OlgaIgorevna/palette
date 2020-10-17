@@ -79,6 +79,7 @@ const Form= ()=>{
             {inputs.map(({id, label,type="text", options})=>{
                 return  <Input id={id} type={type} label={label} options={options} value={getValue(id)} onChange={onChangeInput(id)}/>
             })}
+
             <Button text={"Сохранить"} handler={()=>{ dispatch(sendForm()) } }/>
             <Input id="response" label={"response"} type={"textarea"} value={getValue("response")}/>
         </div>
