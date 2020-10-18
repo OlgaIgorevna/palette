@@ -9,7 +9,6 @@ const palette = (state = initialState, action) => {
     switch (action.type) {
 
         case 'ADD_COLOR':{
-            console.log("add color");
             let id = state.colorIds.length ? Math.max(...state.colorIds) + 1 : 1;
             return {colorIds: [...state.colorIds, id], colors: {...state.colors, [id]:  defaultColor } };
         }

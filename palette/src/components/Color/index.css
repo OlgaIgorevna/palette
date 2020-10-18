@@ -21,6 +21,7 @@
 }
 .picker-wrap{
     position: absolute;
+    z-index: 2;
 }
 .delete{
     display: none;

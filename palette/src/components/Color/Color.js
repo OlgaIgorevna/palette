@@ -27,10 +27,9 @@ const Color= ({id, color, onColorChange=()=>{}, onDelete=()=>{}, initialState=tr
     };
     const onChange=(color)=>{
         setColorPicker(color);
-        console.log("color", color);
         onColorChange(color.hex);
     };
-    
+
     return(
         <div className={"color"}>
             <div className="delete" onClick={onDelete}/>
