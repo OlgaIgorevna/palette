@@ -3,7 +3,7 @@ const initialState = {
     colorIds: []
 };
 
-const defaultColor = "rgb(25, 77, 51)";
+const defaultColor = "#FB9E00";
 
 const palette = (state = initialState, action) => {
     switch (action.type) {

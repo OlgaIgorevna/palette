@@ -32,9 +32,9 @@ const Color= ({id, color, onColorChange=()=>{}, onDelete=()=>{}, initialState=tr
 
     return(
         <div className={"color"}>
-            <div className="delete" onClick={onDelete}/>
             <div className="color-cell" style={{backgroundColor: color}} onClick={onEdit}/>
             {isOpened && <div ref={refPicker} className={"picker-wrap"}><CompactPicker color={colorPicker} onChange={onChange}/> </div>}
+            <div className="delete" onClick={onDelete}/>
         </div>
     )
 

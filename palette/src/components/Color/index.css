@@ -38,6 +38,9 @@
 .color:hover .delete{
     display: block;
 }
+.color .picker-wrap:hover ~ .delete{
+    display: none;
+}
 .color:hover .delete:hover{
     cursor: pointer;
 }
