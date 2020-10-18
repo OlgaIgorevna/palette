@@ -1,10 +1,25 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import "./index.css";
 import { CompactPicker } from 'react-color';
 
 const Color= ({id, color, onColorChange=()=>{}, onDelete=()=>{}, initialState=true})=>{
 
     const [isOpened, setIsOpened] = useState(initialState);
+
+    const refPicker = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (refPicker.current && !refPicker.current.contains(event.target)) {
+            setIsOpened(false);
+        }
+    };
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside, true);
+        return () => {
+            document.removeEventListener('click', handleClickOutside, true);
+        };
+    }, []);
+
     const [colorPicker, setColorPicker] = useState(color);
 
     const onEdit=()=>{
@@ -12,24 +27,15 @@ const Color= ({id, color, onColorChange=()=>{}, onDelete=()=>{}, initialState=tr
     };
     const onChange=(color)=>{
         setColorPicker(color);
-        onColorChange(color);
+        console.log("color", color);
+        onColorChange(color.hex);
     };
-
-    const handleClick=(e)=>{
-
-        console.log(e)
-    };
-
-    useEffect(()=>{
-        document.addEventListener("click", handleClick )
-    }, []);
-
-
+    
     return(
         <div className={"color"}>
             <div className="delete" onClick={onDelete}/>
-            <div className="color-cell" style={{backgroundColor: color}} onClick={()=>{}}/>
-            {isOpened && <CompactPicker color={colorPicker} onChange={onChange}/> }
+            <div className="color-cell" style={{backgroundColor: color}} onClick={onEdit}/>
+            {isOpened && <div ref={refPicker} className={"picker-wrap"}><CompactPicker color={colorPicker} onChange={onChange}/> </div>}
         </div>
     )
 
